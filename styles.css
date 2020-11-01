@@ -1,0 +1,16 @@
+#map {
+    width: 800px;
+    height:400px;
+}
+.container .jumbotron {
+    background-color:#013f78;
+    color:white;
+}
+.wrapper {
+    width:100%;
+    background-color:#013f78;
+    color:white;
+}
+.container .jumbotron p {
+    margin-top: 30px;
+}
