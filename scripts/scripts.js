@@ -121,21 +121,21 @@ let blocks = [{
     "geometry": {
         "type": "Polygon",
         "coordinates": [[
-            [17.07257, 48.15443],
+            [17.07257, 48.15197],
             [17.07257, 48.15444],
             [17.07279, 48.15444],
-            [17.07279, 48.15443],
+            [17.07279, 48.15197],
         ]]
     }
 }];
 
 let busIcon = L.icon({
-    iconUrl: 'bus_marker.png',
+    iconUrl: 'img/bus_marker.png',
     iconSize: [50, 50],
 });
 
 let tramIcon = L.icon({
-    iconUrl: 'tram_marker.png',
+    iconUrl: 'img/tram_marker.png',
     iconSize: [50, 50],
 });
 
