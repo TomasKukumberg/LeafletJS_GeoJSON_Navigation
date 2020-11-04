@@ -18,7 +18,7 @@ L.Routing.control({
     geocoder: L.Control.Geocoder.nominatim()
 }).addTo(map);
 
-//todo make polygon lines straight
+//array of features, each representing a faculty block
 let blocks = [{
     "type": "Feature",
     "properties": {
@@ -52,9 +52,9 @@ let blocks = [{
         "type": "Polygon",
         "coordinates": [[
             [17.073024, 48.152342],
-            [17.073027, 48.152453],
-            [17.074355, 48.152457],
-            [17.074360, 48.152335],
+            [17.073024, 48.152453],
+            [17.074355, 48.152453],
+            [17.074355, 48.152342],
         ]]
     }
 }, {
@@ -70,9 +70,9 @@ let blocks = [{
         "type": "Polygon",
         "coordinates": [[
             [17.072829, 48.152834],
-            [17.072826, 48.152968],
-            [17.073883, 48.152963],
-            [17.073880, 48.152834],
+            [17.072829, 48.152968],
+            [17.073883, 48.152968],
+            [17.073883, 48.152834],
         ]]
     }
 }, {
@@ -89,8 +89,8 @@ let blocks = [{
         "coordinates": [[
             [17.073217, 48.153340],
             [17.073217, 48.153472],
-            [17.074376, 48.153470],
-            [17.074381, 48.153331],
+            [17.074376, 48.153472],
+            [17.074376, 48.153340],
         ]]
     }
 }, {
@@ -105,9 +105,9 @@ let blocks = [{
         "type": "Polygon",
         "coordinates": [[
             [17.072850, 48.153835],
-            [17.072842, 48.153980],
-            [17.073907, 48.153975],
-            [17.073916, 48.153837],
+            [17.072850, 48.153980],
+            [17.073907, 48.153980],
+            [17.073907, 48.153835],
         ]]
     }
 }, {
@@ -122,9 +122,9 @@ let blocks = [{
         "type": "Polygon",
         "coordinates": [[
             [17.07257, 48.15443],
-            [17.0728, 48.15444],
-            [17.07279, 48.15197],
-            [17.07256, 48.15198],
+            [17.07257, 48.15444],
+            [17.07279, 48.15444],
+            [17.07279, 48.15443],
         ]]
     }
 }];
@@ -139,7 +139,6 @@ let tramIcon = L.icon({
     iconSize: [50, 50],
 });
 
-// todo: correct exact positions of markers
 //markers for bus and tram stops
 L.marker([48.15417, 17.07512], {icon: busIcon}).bindPopup("<h4>Autobusová zastávka</h4>" + "<h5>Zoo</h5>" //
     + "<h5>Spoje:</h5> <span>31</span>" 
@@ -216,10 +215,4 @@ let myGeoJson = L.geoJson(blocks, {
     onEachFeature: onEachFeature
 }).addTo(map);
 
-
-//https://www.flaticon.com/free-icon/map_854878?term=map&page=1&position=6 favicon link 
-
-//leaflet routing machine, which uses OSRM. leaflet, bootstrap, geocoder
-
-//todo style popups using css https://stackoverflow.com/questions/12606141/how-would-i-customise-the-look-and-feel-of-the-leaflet-popup
-// https://docs.mapbox.com/mapbox.js/example/v1.0.0/custom-popup-style/
+//https://www.flaticon.com/free-icon/map_854878?term=map&page=1&position=6 free favicon link 
